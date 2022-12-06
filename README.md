@@ -118,3 +118,7 @@ peer lifecycle chaincode commit -o localhost:7050 --ordererTLSHostnameOverride o
 peer lifecycle chaincode querycommitted --channelID mychannel --name general
 ```
 
+
+
+## 添加Org2
+
