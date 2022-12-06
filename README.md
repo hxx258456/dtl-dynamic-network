@@ -95,5 +95,26 @@ peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.examp
 ### 安装智能合约
 
 ```shell
+git clone https://gitlab.sxtxhy.com/fabric/generalchaincode.git
+
+peer lifecycle chaincode package general.tar.gz --path ./generalchaincode --lang golang --label general_1.0
+
+peer lifecycle chaincode install general.tar.gz
+```
+
+### 智能合约审批
+
+```shell
+peer lifecycle chaincode approveformyorg -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile $ORDERER_CA --channelID mychannel --name general --version 1.0 --package-id general_1.0:d14561a15856732cf28d0208155ab7ee9f1151d6be7f2dbfd6621f1b6866e951 --sequence 1
+	
+peer lifecycle chaincode checkcommitreadiness --channelID mychannel --name general --version 1.0 --sequence 1 --output json
+```
+
+### 智能合约提交
+
+```shell
+peer lifecycle chaincode commit -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile $ORDERER_CA --channelID mychannel --name general --version 1.0 --sequence 1 --peerAddresses peer0.org1.example.com:8051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
+
+peer lifecycle chaincode querycommitted --channelID mychannel --name general
 ```
 
