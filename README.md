@@ -122,3 +122,7 @@ peer lifecycle chaincode querycommitted --channelID mychannel --name general
 
 ## 添加Org2
 
+```
+sh -x addOrg2/registerEnroll.sh
+```
+
