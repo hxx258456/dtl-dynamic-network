@@ -14,7 +14,7 @@ networks:
 services:
   Org2cli:
     container_name: Org2cli
-    image: 39.100.227.166:5000/gcbaas-gm/fabric-tools:$IMAGE_TAG
+    image: 39.100.227.166:5000/gcbaas-gm/fabric-tools:latest
     tty: true
     stdin_open: true
     environment:
