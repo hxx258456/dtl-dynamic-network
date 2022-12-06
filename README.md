@@ -2,6 +2,15 @@
 
 fabric动态添加节点，组织，orderer示例
 
+### docker-compose文件规划
+
+| 文件夹名称 |   使用机器    |
+| :--------: | :-----------: |
+| compose170 | 192.168.0.170 |
+| compose172 | 192.168.0.172 |
+
+
+
 ## 初始网络规划
 
 |    节点    |   宿主机ip    |         hosts          | port |
@@ -36,5 +45,17 @@ sh -x scripts/registerEnrollUser.sh
 ```shell
 # pwd config目录下
 configtxgen -profile TwoOrgsOrdererGenesis -channelID system-channel -outputBlock ../system-genesis-block/genesis.block
+```
+
+### 生成通道文件
+
+```shell
+configtxgen -profile TwoOrgsChannel -outputCreateChannelTx ../channel-artifacts/mychannel.tx -channelID mychannel
+```
+
+### org1锚节点定义
+
+```shell
+configtxgen -profile TwoOrgsChannel -outputAnchorPeersUpdate ../channel-artifacts/Org1MSPanchors.tx -channelID mychannel -asOrg Org1MSP
 ```
 
