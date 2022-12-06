@@ -25,3 +25,16 @@ docker pull 39.100.227.166:5000/gcbaas-gm/fabric-baseos:latest
 docker pull 39.100.227.166:5000/gcbaas-gm/fabric-ca:latest
 ```
 
+### 生成组织身份信息
+
+```shell
+sh -x scripts/registerEnrollUser.sh
+```
+
+### 生成创世块
+
+```shell
+# pwd config目录下
+configtxgen -profile TwoOrgsOrdererGenesis -channelID system-channel -outputBlock ../system-genesis-block/genesis.block
+```
+
