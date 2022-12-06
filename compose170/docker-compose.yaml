@@ -58,8 +58,6 @@ services:
     # for example map it to utilize Fauxton User Interface in dev environments.
     ports:
       - "5984:5984"
-    expose:
-      - "5984"
     networks:
       - test
       
@@ -108,9 +106,6 @@ services:
     ports:
       - 7051:7051
       - 7052:7052
-    expose:
-      - 7051
-      - 7052
     depends_on:
       - couchdb0
     networks:

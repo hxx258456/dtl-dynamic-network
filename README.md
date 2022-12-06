@@ -15,7 +15,7 @@ fabric动态添加节点，组织，orderer示例
 
 |    节点    |   宿主机ip    |         hosts          | port |
 | :--------: | :-----------: | :--------------------: | :--: |
-|  orderer0  | 192.168.0.170 |  orderer0.example.com  | 7500 |
+|  orderer0  | 192.168.0.170 |  orderer0.example.com  | 7050 |
 | org1-peer0 | 192.168.0.170 | peer0.org1.example.com | 7051 |
 | ca-orderer | 192.168.0.170 | ca_orderer.example.com | 9054 |
 |  ca-org1   | 192.168.0.170 |  ca_org1.example.com   | 7054 |
@@ -68,7 +68,19 @@ export CORE_PEER_TLS_ROOTCERT_FILE=${PWD}/organizations/peerOrganizations/org1.e
 export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
 export CORE_PEER_ADDRESS=peer0.org1.example.com:7051
 export ORDERER_CA=${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
-peer channel create -o orderer.example.com:7500 -c mychannel --ordererTLSHostnameOverride orderer.example.com -f ./channel-artifacts/mychannel.tx --outputBlock ./channel-artifacts/mychannel.block --tls --cafile $ORDERER_CA
+peer channel create -o localhost:7050 -c mychannel --ordererTLSHostnameOverride orderer.example.com -f ./channel-artifacts/mychannel.tx --outputBlock ./channel-artifacts/mychannel.block --tls --cafile $ORDERER_CA
 
+```
+
+### peer0-org1加入通道
+
+```shell
+export FABRIC_CFG_PATH=$PWD/configtx/
+export CORE_PEER_LOCALMSPID="Org1MSP"
+export CORE_PEER_TLS_ROOTCERT_FILE=${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
+export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
+export CORE_PEER_ADDRESS=localhost:7051
+export ORDERER_CA=${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
+peer channel join -b ./channel-artifacts/mychannel.block
 ```
 
