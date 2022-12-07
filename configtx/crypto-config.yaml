@@ -1,0 +1,43 @@
+OrdererOrgs:
+  # ---------------------------------------------------------------------------
+  # Orderer
+  # ---------------------------------------------------------------------------
+  - Name: Orderer
+    Domain: example.com
+    EnableNodeOUs: true
+    # ---------------------------------------------------------------------------
+    # "Specs" - See PeerOrgs for complete description
+    # ---------------------------------------------------------------------------
+    Specs:
+      - Hostname: orderer
+        SANS:
+          - "{{.Hostname}}.{{.Domain}}"
+          - localhost
+          - 192.168.0.170
+PeerOrgs:
+  # ---------------------------------------------------------------------------
+  # Org2
+  # ---------------------------------------------------------------------------
+  - Name: Org1
+    Domain: org1.example.com
+    EnableNodeOUs: true
+    Template:
+      Count: 1
+      SANS:
+        - "{{.Hostname}}.{{.Domain}}"
+        - localhost
+        - 192.168.0.170
+      Users:
+        Count: 1
+  
+  - Name: Org2
+    Domain: org2.example.com
+    EnableNodeOUs: true
+    Template:
+      Count: 1
+      SANS:
+        - "{{.Hostname}}.{{.Domain}}"
+        - localhost
+        - 192.168.0.172
+      Users:
+        Count: 1
