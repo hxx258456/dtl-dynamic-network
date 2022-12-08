@@ -1,0 +1,78 @@
+{
+  "payload": {
+    "header": {
+      "channel_header": {
+        "channel_id": "system-channel",
+        "type": 2
+      }
+    },
+    "data": {
+      "config_update": {
+        "channel_id": "system-channel",
+        "isolated_data": {},
+        "read_set": {
+          "groups": {
+            "Orderer": {
+              "groups": {},
+              "mod_policy": "",
+              "policies": {},
+              "values": {},
+              "version": "0"
+            }
+          },
+          "mod_policy": "",
+          "policies": {},
+          "values": {},
+          "version": "0"
+        },
+        "write_set": {
+          "groups": {
+            "Orderer": {
+              "groups": {},
+              "mod_policy": "",
+              "policies": {},
+              "values": {
+                "ConsensusType": {
+                  "mod_policy": "Admins",
+                  "value": {
+                    "metadata": {
+                      "consenters": [
+                        {
+                          "client_tls_cert": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNhRENDQWcyZ0F3SUJBZ0lSQUpoVExFUTV2K3VPR0tVOGs5WWt0ekV3Q2dZSUtvRWN6MVVCZzNVd1h6RUwKTUFrR0ExVUVCaE1DUTA0eERqQU1CZ05WQkFnVEJVRnVhSFZwTVE0d0RBWURWUVFIRXdWSVpXWmxhVEVVTUJJRwpBMVVFQ2hNTFpYaGhiWEJzWlM1amIyMHhHakFZQmdOVkJBTVRFWFJzYzJOaExtVjRZVzF3YkdVdVkyOXRNQjRYCkRUSXlNVEl3TnpBME5ETXdNRm9YRFRNeU1USXdOREEwTkRNd01Gb3dTekVMTUFrR0ExVUVCaE1DUTA0eERqQU0KQmdOVkJBZ1RCVUZ1YUhWcE1RNHdEQVlEVlFRSEV3VklaV1psYVRFY01Cb0dBMVVFQXhNVGIzSmtaWEpsY2k1bAplR0Z0Y0d4bExtTnZiVEJhTUJRR0NDcUJITTlWQVlJdEJnZ3FnUnpQVlFHQ0xRTkNBQVI2SFowSTN2ZU16N3RCCnFYMmcvaDFjdkpaQ2cwVGpQdmlwWDFjTEhpQlJ2R2xrbTJFY2hYU3FFMS8wcWpXTndnMDZwTUxnNGhMOWs4WDAKTjQ5eEpsWlJvNEc4TUlHNU1BNEdBMVVkRHdFQi93UUVBd0lGb0RBZEJnTlZIU1VFRmpBVUJnZ3JCZ0VGQlFjRApBUVlJS3dZQkJRVUhBd0l3REFZRFZSMFRBUUgvQkFJd0FEQXJCZ05WSFNNRUpEQWlnQ0NvZGJ5Y0NteUN1cmhzCnpsaGl3dk9pZXNBR3dnc2dmdHpheGU5MnhNM0hjREJOQmdOVkhSRUVSakJFZ2hOdmNtUmxjbVZ5TG1WNFlXMXcKYkdVdVkyOXRnZ2R2Y21SbGNtVnlnaE52Y21SbGNtVnlMbVY0WVcxd2JHVXVZMjl0Z2dsc2IyTmhiR2h2YzNTSApCTUNvQUtvd0NnWUlLb0VjejFVQmczVURTUUF3UmdJaEFLcXZsWjZEY2dJaVZudnYxR1hVYjVjbUxrVDhTUlJUCkF4Q0piK0VSeDd3NEFpRUF2amlIalVNdm9JVHBiaXJJazRrRWs5WGp2WWtNazd3WExJcnJDTmRGUmFzPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==",
+                          "host": "orderer.example.com",
+                          "port": 7050,
+                          "server_tls_cert": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNhRENDQWcyZ0F3SUJBZ0lSQUpoVExFUTV2K3VPR0tVOGs5WWt0ekV3Q2dZSUtvRWN6MVVCZzNVd1h6RUwKTUFrR0ExVUVCaE1DUTA0eERqQU1CZ05WQkFnVEJVRnVhSFZwTVE0d0RBWURWUVFIRXdWSVpXWmxhVEVVTUJJRwpBMVVFQ2hNTFpYaGhiWEJzWlM1amIyMHhHakFZQmdOVkJBTVRFWFJzYzJOaExtVjRZVzF3YkdVdVkyOXRNQjRYCkRUSXlNVEl3TnpBME5ETXdNRm9YRFRNeU1USXdOREEwTkRNd01Gb3dTekVMTUFrR0ExVUVCaE1DUTA0eERqQU0KQmdOVkJBZ1RCVUZ1YUhWcE1RNHdEQVlEVlFRSEV3VklaV1psYVRFY01Cb0dBMVVFQXhNVGIzSmtaWEpsY2k1bAplR0Z0Y0d4bExtTnZiVEJhTUJRR0NDcUJITTlWQVlJdEJnZ3FnUnpQVlFHQ0xRTkNBQVI2SFowSTN2ZU16N3RCCnFYMmcvaDFjdkpaQ2cwVGpQdmlwWDFjTEhpQlJ2R2xrbTJFY2hYU3FFMS8wcWpXTndnMDZwTUxnNGhMOWs4WDAKTjQ5eEpsWlJvNEc4TUlHNU1BNEdBMVVkRHdFQi93UUVBd0lGb0RBZEJnTlZIU1VFRmpBVUJnZ3JCZ0VGQlFjRApBUVlJS3dZQkJRVUhBd0l3REFZRFZSMFRBUUgvQkFJd0FEQXJCZ05WSFNNRUpEQWlnQ0NvZGJ5Y0NteUN1cmhzCnpsaGl3dk9pZXNBR3dnc2dmdHpheGU5MnhNM0hjREJOQmdOVkhSRUVSakJFZ2hOdmNtUmxjbVZ5TG1WNFlXMXcKYkdVdVkyOXRnZ2R2Y21SbGNtVnlnaE52Y21SbGNtVnlMbVY0WVcxd2JHVXVZMjl0Z2dsc2IyTmhiR2h2YzNTSApCTUNvQUtvd0NnWUlLb0VjejFVQmczVURTUUF3UmdJaEFLcXZsWjZEY2dJaVZudnYxR1hVYjVjbUxrVDhTUlJUCkF4Q0piK0VSeDd3NEFpRUF2amlIalVNdm9JVHBiaXJJazRrRWs5WGp2WWtNazd3WExJcnJDTmRGUmFzPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg=="
+                        },
+                        {
+                          "client_tls_cert": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNhakNDQWhDZ0F3SUJBZ0lRQmxGR0liWVBXLzNac2YyR0ZvVktaakFLQmdncWdSelBWUUdEZFRCZk1Rc3cKQ1FZRFZRUUdFd0pEVGpFT01Bd0dBMVVFQ0JNRlFXNW9kV2t4RGpBTUJnTlZCQWNUQlVobFptVnBNUlF3RWdZRApWUVFLRXd0bGVHRnRjR3hsTG1OdmJURWFNQmdHQTFVRUF4TVJkR3h6WTJFdVpYaGhiWEJzWlM1amIyMHdIaGNOCk1qSXhNakE0TURrd01UQXdXaGNOTXpJeE1qQTFNRGt3TVRBd1dqQk1NUXN3Q1FZRFZRUUdFd0pEVGpFT01Bd0cKQTFVRUNCTUZRVzVvZFdreERqQU1CZ05WQkFjVEJVaGxabVZwTVIwd0d3WURWUVFERXhSdmNtUmxjbVZ5TVM1bAplR0Z0Y0d4bExtTnZiVEJhTUJRR0NDcUJITTlWQVlJdEJnZ3FnUnpQVlFHQ0xRTkNBQVM3RFBIS0tRTnEyakI2CjZhYUNHeVJSblVMeXlCM3U0SGFWWmZ6d2NvVXdJY1MrRDR0L3pwR2o4Wm9GTE8vdVptUzNOM0hURUduS1BKQkEKUitZbVNVcG1vNEcvTUlHOE1BNEdBMVVkRHdFQi93UUVBd0lGb0RBZEJnTlZIU1VFRmpBVUJnZ3JCZ0VGQlFjRApBUVlJS3dZQkJRVUhBd0l3REFZRFZSMFRBUUgvQkFJd0FEQXJCZ05WSFNNRUpEQWlnQ0NvZGJ5Y0NteUN1cmhzCnpsaGl3dk9pZXNBR3dnc2dmdHpheGU5MnhNM0hjREJRQmdOVkhSRUVTVEJIZ2hSdmNtUmxjbVZ5TVM1bGVHRnQKY0d4bExtTnZiWUlJYjNKa1pYSmxjakdDRkc5eVpHVnlaWEl4TG1WNFlXMXdiR1V1WTI5dGdnbHNiMk5oYkdodgpjM1NIQk1Db0FLb3dDZ1lJS29FY3oxVUJnM1VEU0FBd1JRSWhBSWxPTDh0d1gwdG5rZmI2MHZjOFZ6VXV4UHo3CktrektwQ25pUjZzQVh5WTRBaUFkdWxqemFpOWQ1MXhTcldSbUJON3NkckRSV09rWTEzK0hiU0JDS0FlVWVnPT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=",
+                          "host": "orderer1.example.com",
+                          "port": 7060,
+                          "server_tls_cert": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNhakNDQWhDZ0F3SUJBZ0lRQmxGR0liWVBXLzNac2YyR0ZvVktaakFLQmdncWdSelBWUUdEZFRCZk1Rc3cKQ1FZRFZRUUdFd0pEVGpFT01Bd0dBMVVFQ0JNRlFXNW9kV2t4RGpBTUJnTlZCQWNUQlVobFptVnBNUlF3RWdZRApWUVFLRXd0bGVHRnRjR3hsTG1OdmJURWFNQmdHQTFVRUF4TVJkR3h6WTJFdVpYaGhiWEJzWlM1amIyMHdIaGNOCk1qSXhNakE0TURrd01UQXdXaGNOTXpJeE1qQTFNRGt3TVRBd1dqQk1NUXN3Q1FZRFZRUUdFd0pEVGpFT01Bd0cKQTFVRUNCTUZRVzVvZFdreERqQU1CZ05WQkFjVEJVaGxabVZwTVIwd0d3WURWUVFERXhSdmNtUmxjbVZ5TVM1bAplR0Z0Y0d4bExtTnZiVEJhTUJRR0NDcUJITTlWQVlJdEJnZ3FnUnpQVlFHQ0xRTkNBQVM3RFBIS0tRTnEyakI2CjZhYUNHeVJSblVMeXlCM3U0SGFWWmZ6d2NvVXdJY1MrRDR0L3pwR2o4Wm9GTE8vdVptUzNOM0hURUduS1BKQkEKUitZbVNVcG1vNEcvTUlHOE1BNEdBMVVkRHdFQi93UUVBd0lGb0RBZEJnTlZIU1VFRmpBVUJnZ3JCZ0VGQlFjRApBUVlJS3dZQkJRVUhBd0l3REFZRFZSMFRBUUgvQkFJd0FEQXJCZ05WSFNNRUpEQWlnQ0NvZGJ5Y0NteUN1cmhzCnpsaGl3dk9pZXNBR3dnc2dmdHpheGU5MnhNM0hjREJRQmdOVkhSRUVTVEJIZ2hSdmNtUmxjbVZ5TVM1bGVHRnQKY0d4bExtTnZiWUlJYjNKa1pYSmxjakdDRkc5eVpHVnlaWEl4TG1WNFlXMXdiR1V1WTI5dGdnbHNiMk5oYkdodgpjM1NIQk1Db0FLb3dDZ1lJS29FY3oxVUJnM1VEU0FBd1JRSWhBSWxPTDh0d1gwdG5rZmI2MHZjOFZ6VXV4UHo3CktrektwQ25pUjZzQVh5WTRBaUFkdWxqemFpOWQ1MXhTcldSbUJON3NkckRSV09rWTEzK0hiU0JDS0FlVWVnPT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo="
+                        }
+                      ],
+                      "options": {
+                        "election_tick": 10,
+                        "heartbeat_tick": 1,
+                        "max_inflight_blocks": 5,
+                        "snapshot_interval_size": 16777216,
+                        "tick_interval": "500ms"
+                      }
+                    },
+                    "state": "STATE_NORMAL",
+                    "type": "etcdraft"
+                  },
+                  "version": "1"
+                }
+              },
+              "version": "0"
+            }
+          },
+          "mod_policy": "",
+          "policies": {},
+          "values": {},
+          "version": "0"
+        }
+      }
+    }
+  }
+}
